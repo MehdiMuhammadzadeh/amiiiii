@@ -1,0 +1,27 @@
+.patient-diary__container {
+    width: 96%;
+    /*margin-left: 2%;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+    height: auto;
+    /*height: 100vh;*/
+    margin-left: 18%;
+    color: white;
+    background-color: #203342;
+    justify-content: center;
+
+}
+
+.patient-date {
+    font-size: 0.8rem;
+
+}
+.patient-date > span{
+    margin-right: 10px;
+}
+/*.patient-diary-container__item {*/
+/*    background-color: #182631;*/
+/*}*/
+

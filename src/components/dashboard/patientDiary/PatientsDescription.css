@@ -1,0 +1,95 @@
+.patient-description {
+    width: 70%;
+    background-color: #203342;
+}
+.patient-description_container {
+    display: inline-block;
+    width: 97%;
+    margin:1.2% 0 1.8% 1.5%;
+    background-color: #182631;
+    border-radius: 5px;
+    padding: 10px 15px 30px 15px ;
+
+}
+
+.patient-description__title-section {
+    border-bottom: 2px solid #4f4f4f;
+}
+.title-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title h4{
+    margin-left: 5px;
+    font-family: sans-serif;
+}
+.date-part span {
+    font-size: 10px;
+}
+.date-part span:last-child{
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+.record-description {
+    margin-top: 15px;
+}
+
+.record-description__item > h5{
+    color: #f5b869;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+.record-description__item > p{
+     margin-left: 10px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #d2d1d1;
+}
+
+.status {
+    border-top: 2px solid #4f4f4f;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.status-photos {
+    background-color: #353455;
+    padding: 10px 0px 5px 0px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.status-photos img {
+    width:50px ;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.photo-item {
+    width: 30%;
+}
+
+.status-modes{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+.status_sleep-time {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

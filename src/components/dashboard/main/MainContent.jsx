@@ -1,7 +1,7 @@
-import "./PatientDiary.css";
+import "./MainContent.css";
 import PatientLog from "./PatientLog";
 
-const PatientDiary = () => {
+const MainContent = () => {
   return (
     <div className="dashboard_main-content">
       <div className="dashboard_main-content--items">
@@ -11,4 +11,4 @@ const PatientDiary = () => {
   );
 };
 
-export default PatientDiary;
+export default MainContent;

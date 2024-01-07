@@ -1,17 +1,18 @@
 import "./Sidebar.css";
 import {useState} from "react";
 
-// eslint-disable-next-line react/prop-types
-const Sidebar = ({changePage}) => {
+const Sidebar = ({changePage, pageType}) => {
     const [expand, setExpand] = useState(false);
-    const [activeTab, setActiveTab] = useState(1)
+    const [activeTab, setActiveTab] = useState(10);
+    const [activeListItem, setActiveListItem] = useState(10);
+
     const tabData = [{label: 'Statistics', tabId: "1"}, {label: 'Patient Diary', tabId: "2"}, {
         label: 'My Notes', tabId: "3"
-    }, {label: 'Tickets', tabId: "4"}]
+    }, {label: 'Tickets', tabId: "4"}, {label:'main list', tabId: '5'}]
 
     const handleTab = (type, index) => {
         setActiveTab(index)
-        changePage(type)
+        changePage(type);
     }
     const expandContract = () => {
         setExpand(!expand);
@@ -32,7 +33,8 @@ const Sidebar = ({changePage}) => {
             </div>
             <div className="sidebar-content">
                 <div className="sidebar-content_menu">
-                    <h3 onClick={expandContract}>Patients</h3>
+                    {/*${index === activeTab ? "active sidebar-content__item": "sidebar-content__item"}*/}
+                    <h3  className={`active_list--item`} style={pageType < 6 && pageType > 0? {color:'#f5b869'}:{color: '#bebebe'}} onClick={expandContract}>Patients</h3>
                     <div id="expand-container">
                         <div id="expand-contract" style={{marginBottom: "5px"}} className="expanded">
                             {expand && (<ul className="sidebar-content__items">
@@ -46,7 +48,7 @@ const Sidebar = ({changePage}) => {
                     </div>
                 </div>
                 <div className="sidebar-content_menu">
-                    <h3>Statistics</h3>
+                    <h3 onClick={()=> changePage("kkkk",6)}>Statistics</h3>
                 </div>
                 <div className="sidebar-content_menu">
                     <h3>Settings</h3>

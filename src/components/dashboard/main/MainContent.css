@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   margin-top: 60px;
   justify-content: space-between;
+  margin-left: 5px;
 }
 
 .dashboard_main-content--item {
