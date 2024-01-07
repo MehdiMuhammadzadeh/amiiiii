@@ -1,0 +1,16 @@
+
+.main-header {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    background-color: #182631;
+
+}
+
+.logo-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}

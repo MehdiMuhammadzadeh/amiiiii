@@ -1,0 +1,93 @@
+.dashboard_main-content {
+  background-color: #203342;
+  height: auto;
+  width: 82%;
+  margin: 0.1rem;
+  margin-left: 18%;
+  border-radius: 3px;
+}
+.dashboard_main-content--items {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.dashboard_main-content--item {
+  display: inline-block;
+  width: 23%;
+  /* height: auto; */
+  height: 188px;
+  background-color: #353455;
+  margin-top: 30px;
+  padding: 12px;
+  border-radius: 7px;
+}
+
+.dashboard_main-content--item-userinfo {
+  display: flex;
+  align-items: center;
+}
+.session_item-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.dashboard_main-content--item-userinfo span:first-child {
+  color: #bbbbbb;
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.dashboard_main-content--item-userinfo span:last-child {
+  color: #f5b869;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.horizental-line {
+  margin-top: 3px;
+  text-align: center;
+  width: 100%;
+  height: 1px;
+  background-color: #aaaaaa;
+}
+
+.session-date > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 80%;
+  margin: 2.5% 0 2.5% 0;
+}
+
+.session-date_item span:last-child{
+  margin-bottom: 10px;
+  color: #fff;
+}
+.session-date_item span:first-child {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-right: 25%;
+  color: #aaaaaae5;
+}
+.patient-name {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.sessions-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+.sessions-icons span:first-child {
+  color: crimson;
+}
+.sessions-icons span:last-child {
+  color: #28bbff;
+}

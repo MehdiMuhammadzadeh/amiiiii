@@ -1,0 +1,87 @@
+.tickets-container {
+    width: 96%;
+    /*margin-left: 2%;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+    height: auto;
+    /*height: 100vh;*/
+    margin-left: 18%;
+    color:white;
+    background-color: #203342;
+
+}
+.tickets-date_container {
+    display: inline-block;
+    width: 100%;
+    /*margin-left: 1%;*/
+    margin-top: 20px;
+    margin-bottom: 1.8%;
+}
+
+.tickets-date_container > span {
+    margin: 2% 2%;
+}
+.notes-container__item > .ticker-divider {
+    display:flex ;
+    align-items: center;
+    align-content: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom:8px;
+    margin-bottom: 1%;
+ }
+.notes-container__item h5 {
+    margin-left: 1%;
+    font-family: "Arial";
+}
+
+.notes-container__item  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+.notes-container__item textarea {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #353455;
+    border: none;
+    outline: none;
+    padding: 10px 0 0 15px;
+    color: #bbbbbb;
+    font-size: 1rem;
+}
+.notes-container__item textarea::placeholder {
+    /*padding: 10px 0 0 15px;*/
+    font-family: "Arial Narrow";
+}
+
+.submit-answer {
+    /*transform: rotate(45deg);*/
+    color: #f5b869;
+     position: relative;
+    right:0;
+    bottom: 0;
+    /*font-size: 4rem;*/
+    cursor: pointer;
+
+}
+.submit-answer:hover {
+    color: #ffc784;
+    transition-duration: 0.5s;
+}
+
+.submit-answer__icon {
+    position: absolute;
+    top: -35px;
+    left: 1320px;
+    font-size: 1.2rem;
+    transform: rotate(45deg);
+}
+/*
+<div>other Div</div>
+<div style="position:relative;">
+    <div style="position:absolute; top: 100px;">Abs Div</div>
+</div>
+ */
