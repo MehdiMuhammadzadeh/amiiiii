@@ -1,0 +1,11 @@
+.statistic-container {
+    width: 96%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-between;
+    height: auto;
+    margin-left: 18%;
+    color:white;
+}

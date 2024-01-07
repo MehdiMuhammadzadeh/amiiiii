@@ -1,0 +1,75 @@
+.patient-record {
+    width: 30%;
+    border-right: 2px solid #4f4f4f;
+    text-align: center;
+}
+.patient-record > h3 {
+    color: #c09e3e;
+    margin: 3% 0 2% 0;
+    text-align: center;
+}
+.patient-record_date--section{
+    margin-top: 10px;
+}
+.patient-record_date--section > span {
+    margin-right: 8px;
+    font-size: 12px;
+}
+.patient-record-content--item {
+    background-color: #182631;
+    border-radius: 5px;
+    width: 96%;
+    margin:2% 0 0 2%;
+    padding: 1.5% 2% 1.5% 2%;
+}
+
+.patient-record_modes {
+    border-bottom: 2px solid #4f4f4f;
+    display: flex;
+    justify-content: space-between;
+    padding:5px 0 5px 0;
+}
+
+.patient-record-content--item-description {
+    font-family: Times New Roman;
+}
+
+.patient-record-content--item-description :nth-child(1){
+    margin: 2px 0 4px 0;
+}
+.patient-record-content--item-description h5 {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    font-family: Tahoma, "Trebuchet MS", "DejuVu Sans", "Bitstream Vera Sans", sans-serif;
+}
+.title-circle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #28bbff;
+    border-radius: 50%;
+}
+.description {
+    margin-top: 2%;
+    font-size: 0.7rem;
+    text-align: left;
+    font-weight: normal;
+    font-family: sans-serif;
+    color: #bbbbbb;
+}
+
+.patient-record_photos {
+    padding: 10px 0 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.patient-record_photos img {
+    margin-right: 5px;
+}

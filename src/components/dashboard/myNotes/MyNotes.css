@@ -1,0 +1,39 @@
+.notes-container {
+    width: 96%;
+    margin-top: 60px;
+    height: auto;
+    margin-left: 18%;
+    color: white;
+    background-color: #203342;
+
+}
+.notes-date_container {
+    display: inline-block;
+    width: 97%;
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 1.8%;
+}
+
+.notes-date_container > span {
+    margin: 2% 2%;
+}
+.notes-container__item {
+    display: inline-block;
+    width: 97%;
+    background-color: #1c2d3a;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 7px;
+    margin-left: 2%;
+
+}
+.notes-container__item > h6 {
+    color: #f5b869;
+    margin: 5px 0;
+}.notes-container__item > p {
+    color: #d2d1d1;
+    margin-left: 10px;
+
+    /*font-size: 12px;*/
+}
