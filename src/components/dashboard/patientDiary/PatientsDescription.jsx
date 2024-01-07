@@ -54,7 +54,7 @@ const PatientsDescription = () => {
                 <div className='status'>
                     <div className='status-photos'>
                         <div className='photo-item'>
-                            <img src="http://gitlab.fardup.ir/uploads/-/system/user/avatar/143/avatar.png?width=96" alt="" />
+                            <img src="https://picsum.photos/200/" alt="" />
                         </div>
                         <div className='photo-item'>
                             <img src="http://gitlab.fardup.ir/uploads/-/system/user/avatar/143/avatar.png?width=96" alt="" />
