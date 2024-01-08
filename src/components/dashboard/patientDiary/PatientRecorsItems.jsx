@@ -36,7 +36,7 @@ const PatientRecorsItems = ({photos})=>{
                         photos.map((item, index) => {
                             return (
                                 <img key={index} style={{width: '28px', height: '28px', borderRadius: '4px'}}
-                                     src="http://gitlab.fardup.ir/uploads/-/system/user/avatar/143/avatar.png?width=96"
+                                     src="https://picsum.photos/200/300"
                                      alt="avatar"/>
                             )
                         })
