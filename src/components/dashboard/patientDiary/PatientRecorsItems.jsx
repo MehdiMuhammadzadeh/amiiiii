@@ -23,7 +23,7 @@ const PatientRecorsItems = ({photos})=>{
                 <div className='patient-record-content--item-description'>
                     <h5>This is the best thing I have ever seen.</h5>
                     <div className='title-circle'>
-                        <h5>This is the best thing I have ever seen.</h5>
+                        <h5>This was an interesting jorney, i want to go again! .</h5>
                         <div className='circle'></div>
                     </div>
                     <p className='description'>
