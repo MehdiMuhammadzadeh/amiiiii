@@ -1,11 +1,21 @@
 .statistic-container {
-    width: 96%;
+    width: 95%;
+    margin: auto;
     margin-left: 2%;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 60px;
-    justify-content: space-between;
+    background-color: #203342;
+    /* height: 92.8vh; */
     height: auto;
     margin-left: 18%;
     color:white;
+}
+.statistic-container__item {
+    display: inline-block;
+    width: 97%;
+    background-color: #353455;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 7px;
+    margin-left: 1.5%;
+
 }
