@@ -14,7 +14,7 @@ const PatientLog = () => {
                   />
                 </div>
                 <div>
-                  <h2 className="patient-name">Anna Green</h2>
+                  <h2 className="patient-name">Sara Kalins</h2>
                   <div>
                     <span>Last Entry: </span>
                     <span>22/02/2024</span>
