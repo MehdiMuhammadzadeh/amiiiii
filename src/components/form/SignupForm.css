@@ -45,7 +45,7 @@
 .submit-btn button {
   width: 100%;
   height: 40px;
-  margin-top: 25px;
+  margin-top: 15px;
   font-family: inherit;
   outline: none;
   border: none;
@@ -65,7 +65,8 @@
   justify-content: space-evenly;
   /* flex-direction: column; */
   font-size: 10px;
-  margin-top: 15px;
+  margin-top: 5px;
+  /* padding-bottom: 15px; */
 }
 .new-account a {
   text-decoration: none;
@@ -76,4 +77,12 @@
 .new-account a:hover {
   color: rgb(170, 170, 255);
   transition-duration: 0.5s;
+}
+.social-media {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
 }
