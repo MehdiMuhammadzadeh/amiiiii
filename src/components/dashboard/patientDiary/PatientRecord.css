@@ -2,6 +2,8 @@
     width: 30%;
     border-right: 2px solid #4f4f4f;
     text-align: center;
+    height: 100vh;
+    overflow-y: scroll;
 }
 .patient-record > h3 {
     color: #c09e3e;
