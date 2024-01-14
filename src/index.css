@@ -6,3 +6,32 @@
   /* text-align: center; */
 
 }
+body {
+  overflow: auto;
+}
+
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #433792;
+  border-radius: 3px;
+}

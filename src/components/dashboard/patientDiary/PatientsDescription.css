@@ -9,6 +9,8 @@
   background-color: #182631;
   border-radius: 5px;
   padding: 10px 15px 30px 15px;
+  /* height: 100vh; */
+  overflow-y: auto;
 }
 
 .patient-description__title-section {

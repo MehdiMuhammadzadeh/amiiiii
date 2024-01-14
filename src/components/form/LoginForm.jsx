@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./LoginForm.css";
 import Validation from "./Validation";
 
-const LoginForm = ({ login, setLogin }) => {
+const LoginForm = ({ login, setLogin, setForgetPass }) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
-  });
+  }); 
 
   const [errors, setErrors] = useState({});
 
@@ -47,7 +47,7 @@ const LoginForm = ({ login, setLogin }) => {
         </div>
         <div className="new-account">
           <Link onClick={() => setLogin(!login)}>Dont have an account!</Link>
-          <Link to="">Forget Password!</Link>
+          <Link onClick={()=>setForgetPass(true)}>Forget Password!</Link>
         </div>
       </form>
     </div>

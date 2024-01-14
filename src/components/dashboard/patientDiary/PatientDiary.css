@@ -5,12 +5,12 @@
     flex-wrap: wrap;
     margin-top: 60px;
     justify-content: space-between;
-    height: auto;
-    /*height: 100vh;*/
+    /* height: 100vh; */
     margin-left: 18%;
     color: white;
     background-color: #203342;
     justify-content: center;
+    /* overflow-y: scroll; */
 
 }
 

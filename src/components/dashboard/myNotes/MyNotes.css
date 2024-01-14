@@ -1,11 +1,12 @@
 .notes-container {
     width: 96%;
     margin-top: 60px;
-    height: auto;
+    height: 100vh;
     margin-left: 18%;
     color: white;
     background-color: #203342;
-
+    
+    overflow-y: scroll;
 }
 .notes-date_container {
     display: inline-block;

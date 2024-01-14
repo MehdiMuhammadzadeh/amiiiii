@@ -5,7 +5,8 @@
     flex-wrap: wrap;
     margin-top: 60px;
     justify-content: space-between;
-    height: auto;
+    height: 100vh;
+    overflow-y: scroll;
     /*height: 100vh;*/
     margin-left: 18%;
     color:white;
