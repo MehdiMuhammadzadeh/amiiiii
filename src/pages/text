@@ -1,0 +1,42 @@
+.not-found_container {
+  background-color: antiquewhite;
+  height: 100vh;
+  width: 100%;
+  /* margin-top: 60px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 60px;
+  /* background: linear-gradient(
+    90deg,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(121, 9, 9, 1) 35%,
+    rgba(255, 0, 0, 1) 100%
+  ); */
+}
+.error-content {
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: transparent;
+}
+.not-found_container h1 {
+  font-size: 20vw;
+    line-height: 1em;
+  font-family: Tahoma;
+
+  
+}
+<div className="not-found_container">
+        <div className="error-content">
+        <h1 className="status-code">404</h1>
+      <h2 className="not-found__title">OOPS! PAGE NOT FOUND</h2>
+      <p className="message">
+        Sorry, the page you are looking for doesnt exist. to return home push
+        the below button
+      </p>
+      <div className="return-home__button">
+        <button className="return-home">RETURN HOME</button>
+      </div>
+        </div>
+    </div>

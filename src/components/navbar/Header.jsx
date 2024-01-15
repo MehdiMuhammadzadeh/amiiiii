@@ -5,10 +5,13 @@ const Header = () => {
   return (
     <>
       <header className="main-header">
-        <div>
-          <Link className="logo-link" to="/dashboard  ">
+        <div className="navbar">
+          <Link className="logo-link" to="/dashboard">
             Dashboard
           </Link>
+          <div className="notif-bell">
+          <i className="bi bi-bell-fill"></i>
+          </div>
         </div>
       </header>
     </>

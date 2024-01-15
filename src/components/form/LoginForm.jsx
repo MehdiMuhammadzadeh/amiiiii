@@ -1,15 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
 import Validation from "./Validation";
 
 const LoginForm = ({ login, setLogin, setForgetPass }) => {
+  // const [errors, setErrors] = useState({});
+  const [emailBorderColor, setEmailBorderColor] = useState(true);
+  const [passwordBorderColor, setPasswordBorderColor] = useState(true);
   const [values, setValues] = useState({
     email: "",
     password: "",
-  }); 
+  });
 
-  const [errors, setErrors] = useState({});
+  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,6}$/;
+  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
 
   const handleInput = (event) => {
     const newObject = { ...values, [event.target.name]: event.target.value };
@@ -18,7 +22,18 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(Validation(values));
+    // setErrors(Validation(values));
+    if (values.email === "" && !email_pattern.test(values.email)) {
+      setEmailBorderColor(false);
+    } else {
+      setEmailBorderColor(true);
+    }
+
+    if (values.password === "" && !password_pattern.test(values.password)) {
+      setPasswordBorderColor(false);
+    } else {
+      setPasswordBorderColor(true);
+    }
     console.log(values);
   };
 
@@ -27,16 +42,26 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
       <h1>Login</h1>
       <form onSubmit={handleSubmit} className="form">
         <input
-          style={errors.email && { borderColor: "red" }}
-          className="email-input"
+          style={
+            emailBorderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
+          // style={errors.email && { borderColor: "red" }}
+          className="login-email__input"
           type="text"
           placeholder="email"
           onChange={handleInput}
           name="email"
         />
         <input
-          style={errors.password && { borderColor: "red" }}
-          className="password-input"
+          style={
+            passwordBorderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
+          // style={errors.password && { borderColor: "red" }}
+          className="login-password__input"
           type="password"
           placeholder="password"
           onChange={handleInput}
@@ -47,7 +72,7 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
         </div>
         <div className="new-account">
           <Link onClick={() => setLogin(!login)}>Dont have an account!</Link>
-          <Link onClick={()=>setForgetPass(true)}>Forget Password!</Link>
+          <Link onClick={() => setForgetPass(true)}>Forget Password!</Link>
         </div>
       </form>
     </div>

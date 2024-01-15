@@ -1,7 +1,7 @@
 .signup-form {
   border: 1px solid #dddddd;
   width: 20%;
-  height: 300px;
+  height: 430px;
   border-radius: 10px;
   background-color: transparent;
   display: flex;
@@ -13,7 +13,7 @@
 .signup-form h1 {
   margin: 7% 0 5% 0;
   color: #dddddd;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .form {
   text-align: center;
@@ -27,13 +27,14 @@
 .password-input,
 .confirm-password__input {
   width: 100%;
-  height: 40px;
+  height: 50px;
   outline: none;
   border-radius: 5px;
   border: 1px solid #dddddd;
   background-color: transparent;
   padding: 0 0 0 10px;
   color: #dddddd;
+  font-size: 1.2rem;
 }
 
 .email-input {
@@ -44,13 +45,13 @@
 }
 .submit-btn button {
   width: 100%;
-  height: 40px;
-  margin-top: 15px;
+  height: 50px;
+  margin-top: 25px;
   font-family: inherit;
   outline: none;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: #dddddd;
   cursor: pointer;
 }
@@ -60,29 +61,57 @@
   color: #dddddd;
 }
 
-.new-account {
+.account {
   display: flex;
   justify-content: space-evenly;
   /* flex-direction: column; */
-  font-size: 10px;
-  margin-top: 5px;
+  font-size: 1rem;
+  margin-top: 15px;
   /* padding-bottom: 15px; */
 }
-.new-account a {
+.account a {
   text-decoration: none;
   color: rgb(58, 58, 246);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.new-account a:hover {
+.account a:hover {
   color: rgb(170, 170, 255);
   transition-duration: 0.5s;
 }
 .social-media {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-evenly;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 25px;
   cursor: pointer;
+}
+
+.social-media .bi-facebook {
+  color: #0066ff;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.social-media .bi-whatsapp{
+color: #2ff615;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.social-media .bi-twitter-x {
+  color: #bfbfbf;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+.social-media .bi-telegram {
+  color: #33ccff;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+.social-media .bi-instagram {
+  color: #ff0066;
+  font-size: 1rem;
+  margin-right: 2px;
 }

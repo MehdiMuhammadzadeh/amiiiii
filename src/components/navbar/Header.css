@@ -1,16 +1,28 @@
-
 .main-header {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    position: fixed;
-    height: 60px;
-    top: 0;
-    background-color: #182631;
-
+  width: 100%;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  background-color: #182631;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
-.logo-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
+.notif-bell i {
+  font-size: 1.5rem;
+  color: #f5b869;
+}
+
+.notif-bell i:hover {
+    color: rgb(255, 149, 0);
+    transition: all 1s ease
 }
