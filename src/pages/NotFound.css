@@ -15,7 +15,7 @@
 
 .error-container {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 17%;
   right: 17%;
   bottom: 10%;
@@ -115,7 +115,7 @@
   text-transform: uppercase;
   background-color: #ea7713;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   color: #353455;
   font-weight: bold;
 }

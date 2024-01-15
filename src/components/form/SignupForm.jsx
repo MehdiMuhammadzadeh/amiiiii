@@ -8,7 +8,7 @@ import Validation from "./Validation";
 //   fontSize: "10px",
 // };
 
-const SignupForm = ({login, setLogin}) => {
+const SignupForm = ({ login, setLogin }) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -67,14 +67,14 @@ const SignupForm = ({login, setLogin}) => {
           <button type="submit">Signup</button>
         </div>
         <div className="social-media">
-        <i style={{color:'#0066ff', fontSize:'8px', marginRight:'2px'}} className="bi bi-facebook"></i>
-        <i style={{color:'#8cff66', fontSize:'8px', marginRight:'2px'}} className="bi bi-whatsapp"></i>
-        <i style={{color:'#bfbfbf', fontSize:'8px', marginRight:'2px'}} className="bi bi-twitter-x"></i>
-        <i style={{color:'#33ccff', fontSize:'8px', marginRight:'2px'}} className="bi bi-telegram"></i>
-        <i style={{color:'#ff0066', fontSize:'8px', marginRight:'2px'}} className="bi bi-instagram"></i>
+          <i className="bi bi-facebook"></i>
+          <i className="bi bi-whatsapp"></i>
+          <i className="bi bi-twitter-x"></i>
+          <i className="bi bi-telegram"></i>
+          <i className="bi bi-instagram"></i>
         </div>
-        <div className="new-account">
-          <Link onClick={()=>setLogin(!login)}>Already have an account!</Link>
+        <div className="account">
+          <Link onClick={() => setLogin(!login)}>Already have an account!</Link>
         </div>
       </form>
     </div>

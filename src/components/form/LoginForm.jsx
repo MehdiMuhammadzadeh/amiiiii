@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
 import Validation from "./Validation";
@@ -28,7 +28,7 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
       <form onSubmit={handleSubmit} className="form">
         <input
           style={errors.email && { borderColor: "red" }}
-          className="email-input"
+          className="login-email__input"
           type="text"
           placeholder="email"
           onChange={handleInput}
@@ -36,7 +36,7 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
         />
         <input
           style={errors.password && { borderColor: "red" }}
-          className="password-input"
+          className="login-password__input"
           type="password"
           placeholder="password"
           onChange={handleInput}

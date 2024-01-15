@@ -10,7 +10,7 @@ const Header = () => {
             Dashboard
           </Link>
           <div className="notif-bell">
-          <i class="bi bi-bell-fill"></i>
+          <i className="bi bi-bell-fill"></i>
           </div>
         </div>
       </header>
