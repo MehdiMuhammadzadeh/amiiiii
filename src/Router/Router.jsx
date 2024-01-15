@@ -1,13 +1,11 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Header from "../components/navbar/Header";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
-import { useState } from "react";
 import ShowHeader from "../components/navbar/ShowHeader";
 const Router = () => {
-  const [header, setHeader] = useState(false);
 
   return (
     <BrowserRouter>
@@ -22,5 +20,7 @@ const Router = () => {
     </BrowserRouter>
   );
 };
+
+
 
 export default Router;

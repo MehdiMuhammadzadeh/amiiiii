@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const ForgetPassword = ({ setForgetPass }) => {
   const [values, setValues] = useState({ email: "" });
-  // const [borderColor, setBorderColor] = useState({ border: "1px solid #dddddd" });
   const [borderColor, setBorderColor] = useState(true);
   // const [errors, setErrors] = useState({});
 
@@ -17,15 +16,11 @@ const ForgetPassword = ({ setForgetPass }) => {
   const handleForgetPassword = (event) => {
     event.preventDefault();
     // setErrors(Validation(values));
-    // console.log(values);
+    console.log(values);
     if (values.email === "" && !email_pattern.test(values.email)) {
       setBorderColor(false);
-      console.log(borderColor)
-      console.log("Check the emptiness of email");
     } else {
       setBorderColor(true);
-      console.log("check the form of email");
-      console.log(borderColor)
     }
   };
 
@@ -34,8 +29,11 @@ const ForgetPassword = ({ setForgetPass }) => {
       <h1>Forget Password</h1>
       <form className="form" onSubmit={handleForgetPassword}>
         <input
-          style={borderColor ? { border: "1px solid #dddddd" } : { border: "1px solid red" } }
-          // style={borderColor}
+          style={
+            borderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
           className="email-input_forgetPass"
           type="text"
           placeholder="email"

@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
-const ShowHeader = ({children}) => {
+const ShowHeader = ({ children }) => {
+  const [showHeader, setShowHeader] = useState(false);
+  const location = useLocation();
 
-    const [showHeader, setShowHeader] = useState(false)
+  useEffect(() => {
+    if (location.pathname !== "/" && location.pathname !== "/dashboard") {
+      setShowHeader(false);
+    } else {
+      setShowHeader(true);
+    }
+  }, [location]);
 
-    const location = useLocation()
-    useEffect(()=>{
-        if(location.pathname !== '/' && location.pathname !== '/dashboard') {
-            setShowHeader(false)
-        }else {
-            setShowHeader(true)
-        }
-    }, [location])
+  return <div>{showHeader && children}</div>;
+};
 
-  return (
-    <div>{showHeader && children}</div>
-  )
-}
-
-export default ShowHeader
+export default ShowHeader;

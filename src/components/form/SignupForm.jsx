@@ -2,20 +2,23 @@ import React, { useState } from "react";
 import "./SignupForm.css";
 import { Link } from "react-router-dom";
 import Validation from "./Validation";
-
-// const styleError = {
-//   color: "red",
-//   fontSize: "10px",
-// };
+import Swal from "sweetalert2";
 
 const SignupForm = ({ login, setLogin }) => {
+  const [errors, setErrors] = useState({});
+  const [emailBorderColor, setEmailBorderColor] = useState(true);
+  const [passwordBorderColor, setPasswordBorderColor] = useState(true);
+  const [confirmpassBorderColor, setConfirmpassBorderColor] = useState(true);
   const [values, setValues] = useState({
     email: "",
     password: "",
     confirmPassword: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,6}$/;
+  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+  const confirmPassword_pattern =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
 
   const handleInput = (event) => {
     const newObject = { ...values, [event.target.name]: event.target.value };
@@ -24,7 +27,33 @@ const SignupForm = ({ login, setLogin }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(Validation(values));
+    // setErrors(Validation(values));
+
+    if (values.email === "" && !email_pattern.test(values.email)) {
+      setEmailBorderColor(false);
+    } else {
+      setEmailBorderColor(true);
+    }
+    if (values.password === "" && !password_pattern.test(values.password)) {
+      setPasswordBorderColor(false);
+    } else {
+      setPasswordBorderColor(true);
+    }
+    if (
+      values.confirmPassword === "" &&
+      !confirmPassword_pattern.test(values.confirmPassword)
+    ) {
+      setConfirmpassBorderColor(false);
+    } else {
+      setConfirmpassBorderColor(true);
+    }
+
+    if(values.password.length !== values.confirmPassword.length) {
+      console.log('Passwords are not match');
+      setConfirmpassBorderColor(false)
+      Swal.fire("Passwords do not match!");
+    }
+
     console.log(values);
   };
 
@@ -33,36 +62,42 @@ const SignupForm = ({ login, setLogin }) => {
       <h1>Signup</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input
-          style={errors.email && { border: "1px solid red" }}
+          style={
+            emailBorderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
           className="email-input"
           type="text"
           placeholder="email"
           onChange={handleInput}
           name="email"
         />
-        {/* {errors.email && <p style={styleError}>{errors.email}</p>} */}
         <input
-          style={errors.password && { border: "1px solid red" }}
+          style={
+            passwordBorderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
           className="password-input"
           type="password"
           placeholder="password"
           onChange={handleInput}
           name="password"
         />
-        <div>
-          {/* {errors.password && <p style={styleError}>{errors.password}</p>} */}
-        </div>
+        <div></div>
         <input
-          style={errors.confirmPassword && { border: "1px solid red" }}
+          style={
+            confirmpassBorderColor
+              ? { border: "1px solid #dddddd" }
+              : { border: "1px solid red" }
+          }
           className="confirm-password__input"
           type="password"
           placeholder="confim password"
           onChange={handleInput}
           name="confirmPassword"
         />
-        {/* {errors.confirmPassword && (
-          <p style={styleError}>{errors.confirmPassword}</p>
-        )} */}
         <div className="submit-btn">
           <button type="submit">Signup</button>
         </div>
