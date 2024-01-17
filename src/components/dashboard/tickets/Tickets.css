@@ -76,7 +76,7 @@
 .submit-answer__icon {
     position: absolute;
     top: -35px;
-    left: 1320px;
+    right: 20px;
     font-size: 1.2rem;
     transform: rotate(45deg);
 }

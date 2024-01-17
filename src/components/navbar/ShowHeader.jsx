@@ -6,7 +6,7 @@ const ShowHeader = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname !== "/" && location.pathname !== "/dashboard") {
+    if (location.pathname !== "/dashboard") {
       setShowHeader(false);
     } else {
       setShowHeader(true);

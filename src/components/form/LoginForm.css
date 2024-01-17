@@ -1,4 +1,12 @@
-
+.login-home {
+    background-color: #182631;
+    height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden !important;
+}
 .login-form {
     border: 1px solid #dddddd;
     width: 20%;

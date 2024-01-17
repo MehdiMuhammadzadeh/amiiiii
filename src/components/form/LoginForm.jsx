@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
-import Validation from "./Validation";
+
 
 const LoginForm = ({ login, setLogin, setForgetPass }) => {
   // const [errors, setErrors] = useState({});
@@ -38,7 +38,8 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
   };
 
   return (
-    <div className="login-form">
+<div className="login-home">
+<div className="login-form">
       <h1>Login</h1>
       <form onSubmit={handleSubmit} className="form">
         <input
@@ -71,11 +72,12 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
           <button type="submit">Login</button>
         </div>
         <div className="new-account">
-          <Link onClick={() => setLogin(!login)}>Dont have an account!</Link>
-          <Link onClick={() => setForgetPass(true)}>Forget Password!</Link>
+          <Link to='/signup'>Dont have an account!</Link>
+          <Link to='/forget-password'>Forget Password!</Link>
         </div>
       </form>
     </div>
+</div>
   );
 };
 

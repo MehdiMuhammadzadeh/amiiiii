@@ -1,9 +1,40 @@
 .home {
   background-color: #182631;
   height: 100vh;
-  padding-top: 200px;
-  display: flex;
+  width: 100%;
+  /* padding-top: 200px; */
+
+  /* display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column; */
   overflow: hidden !important;
+}
+.home h1 {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 200px;
+  text-align: center;
+}
+.home-btns {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home-btns button {
+  border: none;
+  height: 40px;
+  width: 250px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.home-btns button:hover {
+  transition: all 1s ease;
+  background-color: rgb(255, 102, 0);
+  color: #fff;
+}
+
+.home-btns button:nth-child(1) {
+  margin: 0 10px 0 15px;
 }
