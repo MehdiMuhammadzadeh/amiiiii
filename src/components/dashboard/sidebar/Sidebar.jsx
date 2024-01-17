@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 import { useState } from "react";
 
 const Sidebar = ({ changePage, pageType }) => {
   const [expand, setExpand] = useState(false);
   const [activeTab, setActiveTab] = useState(10);
-  const [activeListItem, setActiveListItem] = useState(10);
+  // const [activeListItem, setActiveListItem] = useState(10);
+  const navigate = useNavigate()
 
   const tabData = [
     { label: "Statistics", tabId: "1" },
@@ -13,8 +15,6 @@ const Sidebar = ({ changePage, pageType }) => {
       label: "My Notes",
       tabId: "3",
     },
-    { label: "Tickets", tabId: "4" },
-    { label: "main list", tabId: "5" },
   ];
 
   const handleTab = (type, index) => {
@@ -24,6 +24,7 @@ const Sidebar = ({ changePage, pageType }) => {
   const expandContract = () => {
     setExpand(!expand);
   };
+
 
   return (
     <div className="sidebar">
@@ -82,10 +83,13 @@ const Sidebar = ({ changePage, pageType }) => {
           </div>
         </div>
         <div className="sidebar-content_menu">
-          <h3 onClick={() => changePage("kkkk", 6)}>Tickets</h3>
+          <h3 onClick={()=>changePage("4")}>Tickets</h3>
         </div>
         <div className="sidebar-content_menu">
-          <h3>Home</h3>
+          <h3 onClick={()=>changePage("5")}>Home</h3>
+        </div>
+        <div className="sidebar-content_menu" onClick={()=>navigate('/')}>
+          <h3>Exit</h3>
         </div>
       </div>
     </div>

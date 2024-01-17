@@ -25,27 +25,29 @@ const ForgetPassword = ({ setForgetPass }) => {
   };
 
   return (
-    <div className="forget-pass__form">
-      <h1>Forget Password</h1>
-      <form className="form" onSubmit={handleForgetPassword}>
-        <input
-          style={
-            borderColor
-              ? { border: "1px solid #dddddd" }
-              : { border: "1px solid red" }
-          }
-          className="email-input_forgetPass"
-          type="text"
-          placeholder="email"
-          onChange={handleInput}
-          name="email"
-        />
-        <div className="udpate-password">
-          <button type="submit">update password</button>
+    <div className="forget-pass-home">
+      <div className="forget-pass__form">
+        <h1>Forget Password</h1>
+        <form className="form" onSubmit={handleForgetPassword}>
+          <input
+            style={
+              borderColor
+                ? { border: "1px solid #dddddd" }
+                : { border: "1px solid red" }
+            }
+            className="email-input_forgetPass"
+            type="text"
+            placeholder="email"
+            onChange={handleInput}
+            name="email"
+          />
+          <div className="udpate-password">
+            <button type="submit">update password</button>
+          </div>
+        </form>
+        <div className="back-to-login">
+          <Link to="/login">Back to login!</Link>
         </div>
-      </form>
-      <div className="back-to-login">
-        <Link onClick={() => setForgetPass(false)}>Back to login!</Link>
       </div>
     </div>
   );

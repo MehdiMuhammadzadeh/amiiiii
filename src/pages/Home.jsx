@@ -1,16 +1,30 @@
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import LoginForm from "../components/form/LoginForm";
-import SignupForm from "../components/form/SignupForm";
-import { useState } from "react";
-import ForgetPassword from "../components/form/ForgetPassword";
 const Home = () => {
-  const [login, setLogin] = useState(true);
-  const [forgetPass, setForgetPass] = useState(false);
+
+const navigate = useNavigate()
 
   return (
     <>
       <div className="home">
-        {login ? (
+          <h1>welcome to the ami-dashboard</h1>
+          <div className="home-btns">
+            <button onClick={()=> navigate('/login')}>login</button>
+            <button onClick={()=> navigate('/signup')}>signup</button>
+          </div>
+      </div>
+    </>
+  );
+};
+
+export default Home;
+
+
+
+/*
+  const [login, setLogin] = useState(true);
+  const [forgetPass, setForgetPass] = useState(false);
+ *  {login ? (
           [
             forgetPass ? (
               <ForgetPassword key={Math.random()} setForgetPass={setForgetPass} />
@@ -26,9 +40,4 @@ const Home = () => {
         ) : (
           <SignupForm login={login} setLogin={setLogin} />
         )}
-      </div>
-    </>
-  );
-};
-
-export default Home;
+ */

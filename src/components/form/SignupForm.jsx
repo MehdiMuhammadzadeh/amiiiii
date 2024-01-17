@@ -58,7 +58,8 @@ const SignupForm = ({ login, setLogin }) => {
   };
 
   return (
-    <div className="signup-form">
+<div className="signup-home">
+<div className="signup-form">
       <h1>Signup</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input
@@ -99,7 +100,7 @@ const SignupForm = ({ login, setLogin }) => {
           name="confirmPassword"
         />
         <div className="submit-btn">
-          <button type="submit">Signup</button>
+          <button type="submit" className="signup">Signup</button>
         </div>
         <div className="social-media">
           <i className="bi bi-facebook"></i>
@@ -109,10 +110,11 @@ const SignupForm = ({ login, setLogin }) => {
           <i className="bi bi-instagram"></i>
         </div>
         <div className="account">
-          <Link onClick={() => setLogin(!login)}>Already have an account!</Link>
+          <Link to='/login'>Already have an account!</Link>
         </div>
       </form>
     </div>
+</div>
   );
 };
 

@@ -1,6 +1,17 @@
+.signup-home {
+    background-color: #182631;
+    height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden !important;  
+    width: 100%;
+}
+
 .signup-form {
-  border: 1px solid #dddddd;
   width: 20%;
+  border: 1px solid #dddddd;
   height: 430px;
   border-radius: 10px;
   background-color: transparent;
@@ -51,7 +62,7 @@
   outline: none;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   background-color: #dddddd;
   cursor: pointer;
 }
