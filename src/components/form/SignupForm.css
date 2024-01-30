@@ -1,12 +1,19 @@
 .signup-home {
     background-color: #182631;
     height: 100vh;
-    padding-top: 200px;
+    padding-top: 150px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     overflow: hidden !important;  
     width: 100%;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
 .signup-form {
@@ -54,20 +61,36 @@
 .confirm-password__input {
   margin-top: 4%;
 }
+
+.submit-btn {
+  display: flex;
+  
+}
+
 .submit-btn button {
-  width: 100%;
+  /* width: 100%; */
   height: 50px;
   margin-top: 25px;
   font-family: inherit;
   outline: none;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem !important;
+  font-size: 1rem !important;
   background-color: #dddddd;
   cursor: pointer;
+  margin: 0 2px 0 2px;
 }
-.submit-btn button:hover {
+.submit-btn .signup {
+  font-size: 1.2rem !important;
+}
+
+.submit-btn .signup:hover {
   background-color: #353455;
+  transition-duration: 1s;
+  color: #dddddd;
+}
+.submit-btn .google-signin:hover {
+  background-color: #1b14e4;
   transition-duration: 1s;
   color: #dddddd;
 }
@@ -125,4 +148,9 @@ color: #2ff615;
   color: #ff0066;
   font-size: 1rem;
   margin-right: 2px;
+}
+
+.social-media .bi-google {
+  color: rgb(223, 30, 30);
+  font-size: 1rem;
 }

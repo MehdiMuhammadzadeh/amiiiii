@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../auth/Firbase";
 
 const LoginForm = ({ login, setLogin, setForgetPass }) => {
   // const [errors, setErrors] = useState({});
@@ -35,49 +36,59 @@ const LoginForm = ({ login, setLogin, setForgetPass }) => {
       setPasswordBorderColor(true);
     }
     console.log(values);
+
+    signInWithEmailAndPassword(auth, values.email, values.password)
+      .then((userCredential) => {
+        console.log(userCredential, "UserCredential");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
-<div className="login-home">
-<div className="login-form">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <input
-          style={
-            emailBorderColor
-              ? { border: "1px solid #dddddd" }
-              : { border: "1px solid red" }
-          }
-          // style={errors.email && { borderColor: "red" }}
-          className="login-email__input"
-          type="text"
-          placeholder="email"
-          onChange={handleInput}
-          name="email"
-        />
-        <input
-          style={
-            passwordBorderColor
-              ? { border: "1px solid #dddddd" }
-              : { border: "1px solid red" }
-          }
-          // style={errors.password && { borderColor: "red" }}
-          className="login-password__input"
-          type="password"
-          placeholder="password"
-          onChange={handleInput}
-          name="password"
-        />
-        <div className="submit-btn">
-          <button type="submit">Login</button>
-        </div>
-        <div className="new-account">
-          <Link to='/signup'>Dont have an account!</Link>
-          <Link to='/forget-password'>Forget Password!</Link>
-        </div>
-      </form>
+    <div className="login-home">
+      <div className="login-form">
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit} className="form">
+          <input
+            style={
+              emailBorderColor
+                ? { border: "1px solid #dddddd" }
+                : { border: "1px solid red" }
+            }
+            // style={errors.email && { borderColor: "red" }}
+            className="login-email__input"
+            type="text"
+            placeholder="email"
+            onChange={handleInput}
+            name="email"
+            value={values.email}
+          />
+          <input
+            style={
+              passwordBorderColor
+                ? { border: "1px solid #dddddd" }
+                : { border: "1px solid red" }
+            }
+            // style={errors.password && { borderColor: "red" }}
+            className="login-password__input"
+            type="password"
+            placeholder="password"
+            onChange={handleInput}
+            name="password"
+            value={values.password}
+          />
+          <div className="submit-btn">
+            <button type="submit">Login</button>
+          </div>
+          <div className="new-account">
+            <Link to="/signup">Dont have an account!</Link>
+            <Link to="/forget-password">Forget Password!</Link>
+          </div>
+        </form>
+      </div>
     </div>
-</div>
   );
 };
 

@@ -16,7 +16,6 @@ const ForgetPassword = ({ setForgetPass }) => {
   const handleForgetPassword = (event) => {
     event.preventDefault();
     // setErrors(Validation(values));
-    console.log(values);
     if (values.email === "" && !email_pattern.test(values.email)) {
       setBorderColor(false);
     } else {
