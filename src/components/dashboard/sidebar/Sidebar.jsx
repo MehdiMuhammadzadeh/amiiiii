@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 import { useState } from "react";
+import AuthDetails from "../../../auth/AuthDetails";
 
 const Sidebar = ({ changePage, pageType }) => {
   const [expand, setExpand] = useState(false);
   const [activeTab, setActiveTab] = useState(10);
-  // const [activeListItem, setActiveListItem] = useState(10);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const localDataName = localStorage.getItem("name");
+  const localDataEmail = localStorage.getItem("email");
+  const localDataPic = localStorage.getItem("profileAvatar");
 
   const tabData = [
     { label: "Statistics", tabId: "1" },
@@ -16,7 +19,6 @@ const Sidebar = ({ changePage, pageType }) => {
       tabId: "3",
     },
   ];
-
   const handleTab = (type, index) => {
     setActiveTab(index);
     changePage(type);
@@ -25,19 +27,15 @@ const Sidebar = ({ changePage, pageType }) => {
     setExpand(!expand);
   };
 
-
   return (
     <div className="sidebar">
       <div className="sidedar-header">
         <div className="avatar">
-          <img
-            src="https://avatars.githubusercontent.com/u/53970818?v=4"
-            alt="avatar"
-          />
+          <img src={localDataPic} alt="avatar" />
         </div>
         <div className="user-data">
-          <h2>Mehdi Mohammadzadeh</h2>
-          <p>mehdi.mrpr93@gmail.com</p>
+          <h2>{localDataName}</h2>
+          <p>{localDataEmail}</p>
         </div>
       </div>
       <div className="sidebar-content">
@@ -83,13 +81,14 @@ const Sidebar = ({ changePage, pageType }) => {
           </div>
         </div>
         <div className="sidebar-content_menu">
-          <h3 onClick={()=>changePage("4")}>Tickets</h3>
+          <h3 onClick={() => changePage("4")}>Tickets</h3>
         </div>
         <div className="sidebar-content_menu">
-          <h3 onClick={()=>changePage("5")}>Home</h3>
+          <h3 onClick={() => changePage("5")}>Home</h3>
         </div>
-        <div className="sidebar-content_menu" onClick={()=>navigate('/')}>
+        <div className="sidebar-content_menu" onClick={() => navigate("/")}>
           <h3>Exit</h3>
+          {/* <AuthDetails /> */}
         </div>
       </div>
     </div>
